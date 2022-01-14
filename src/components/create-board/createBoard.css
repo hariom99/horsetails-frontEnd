@@ -1,0 +1,154 @@
+.popup-container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(1px);
+    background-color: white 0.1;
+}
+
+.popup{
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+    height: 320px;
+    width: 35%;
+    border-radius: 10%;
+    background-color: rgb(226, 246, 226);
+    border: 1px solid black;
+    z-index: 4;
+}
+
+.create-new-board{
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+}
+.new-board-input{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.new-board-input > input{
+    background-color: white;
+    height: 35px;
+    border-radius: 10px;
+}
+
+
+.board-color-container{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.board-color-container :nth-last-child(1){
+margin-top: 18px;
+}
+
+
+
+.radio-btn{
+    display: none;
+}
+
+.popup-r-label{
+    display: inline-block;
+    margin:0 5px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+}
+
+.pl1{
+    background-color: #FEF445;
+}
+.pl2{
+    background-color:#FAC710;
+}
+.pl3{
+    background-color:#8FD14F;
+}
+.pl4{
+    background-color:#9510AC;
+}
+.pl5{
+    background-color:#2D9BF0;
+}
+.pl6{
+    background-color:#652CB3;
+}
+.pl7{
+    background-color:#808080;
+}
+
+
+.r1:checked ~ .pl1{
+    border: 2px solid black;
+}
+.r2:checked ~ .pl2{
+    border: 2px solid black;
+}
+.r3:checked ~ .pl3{
+    border: 2px solid black;
+}
+.r4:checked ~ .pl4{
+    border: 2px solid black;
+}
+.r5:checked ~ .pl5{
+    border: 2px solid black;
+}
+.r6:checked ~ .pl6{
+    border: 2px solid black;
+}
+.r7:checked ~ .pl7{
+    border: 2px solid black;
+}
+
+.crt-board-btn-container{
+    /* border: 2px solid black; */
+    width: 50%;
+}
+
+.create-new-board-btn{
+    margin-top: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: #414BB2;
+    color: white;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.create-new-board-btn:hover{
+    transition: .5s ease;
+    transform: scale(1.05);
+}
+
+.board-warning{
+    /* border: 1px solid red; */
+    width: 80%;
+    font-size: 10px;
+    color: red;
+}
+
+
+@media screen and (max-width:700px) {
+    .popup{
+        position: fixed;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%,-20%);
+        height: 320px;
+        width: 80%;
+        border-radius: 10%;
+        background-color: rgb(226, 246, 226);
+        border: 1px solid black;
+        z-index: 4;
+    }
+    
+}

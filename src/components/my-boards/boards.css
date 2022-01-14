@@ -1,0 +1,144 @@
+.boards-parent{
+    /* border:2px solid black; */
+    display: flex;
+    flex-direction: column;
+    
+}
+.my-boards-heading{
+    margin-top: 40px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: rgb(61, 57, 57);
+}
+.my-boards-btn{
+    text-align: center;
+    margin-top: 50px;
+}
+.create-board-btn{
+background-color: rgb(12,167,137);
+color: white;
+border: none;
+height: 45px;
+width: 180px;
+border-radius: 10px;
+}
+
+.create-board-btn:hover{
+    transition: 0.5s ease;
+    transform: scale(1.02);
+    cursor: pointer;
+    background-color: rgb(43, 138, 119);;
+}
+
+.my-boards-container{
+    margin-top: 50px;
+}
+
+.mbc-hr{
+    width: 90%;
+    height: 2px;
+    background-color: rgb(131, 117, 117);
+    border-radius: 50px;
+}
+
+.my-boards{
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(97, 88, 88);
+    /* border: 2px solid red; */
+
+}
+
+.boards{
+    margin-top: 20px;
+    /* border: 2px solid red; */
+    /* height: 200px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.board{
+    color: white;
+    border-radius: 15px;
+    margin: 15px 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(15, 140, 179);
+    width: 300px;
+    height: 140px;
+    text-transform: capitalize;
+}
+
+
+.add-board{
+    margin: 0 55px;
+    background-color: white;
+    color: black;
+    font-size: 180px;
+    cursor: pointer;
+    user-select: none;
+}
+.board:hover
+{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.8s ease;
+}
+.btn-logout{
+    align-self: flex-end;
+    margin-right: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    /* float: right; */
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+}
+
+@media screen and (max-width:700px) {
+    .btn-logout{
+        align-self: flex-end;
+        margin-right: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        /* float: right; */
+        font-size: 20px;
+        width: 120px;
+        height: 30px;
+    }
+    .my-boards{
+        width: 100%;
+    }
+    
+
+
+.board{
+    color: white;
+    border-radius: 15px;
+    margin: 15px 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(15, 140, 179);
+    width: 480px;
+    height: 140px;
+    text-transform: capitalize;
+}
+.add-board{
+    margin: 0 55px;
+    background-color: white;
+    color: black;
+    font-size: 180px;
+    cursor: pointer;
+    user-select: none;
+}
+
+}
