@@ -23,7 +23,8 @@ const CreateTask = (props) => {
             setTaskWarning(null);
             const newTask = props.location.state;
             const token = localStorage.getItem("token");
-            const url = "http://localhost:8080/myboards/board-details/create-task/";
+            // const url = "http://localhost:8080/myboards/board-details/create-task/";
+            const url = "https://board-app-horsetails.herokuapp.com/myboards/board-details/create-task/";
             axios.post(url, { token, newTask, task }).then((res) => {
                 if (res.data === "SESSION_EXPIRED")
                     history.push("/login");
@@ -43,10 +44,13 @@ const CreateTask = (props) => {
         }
     }
 
+    const cancelTask = () => {
+        history.goBack();
+    }
 
     return (<div className="signup-container" >
         <div className="login-signup" >
-            <span>&#215;
+            <span onClick={cancelTask} className="cancel-task" >&#215;
             </span>
         </div>
         <div className="sign-up" >

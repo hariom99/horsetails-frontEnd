@@ -17,7 +17,8 @@ const BoardDetails = (props) => {
     // const [dummy, setDummy] = useState(false);
     // console.log(props.location.state.boardDetails);
     useEffect(() => {
-        const url = "http://localhost:8080/myboards/board-details/";
+        // const url = "http://localhost:8080/myboards/board-details/";
+        const url = "https://board-app-horsetails.herokuapp.com/myboards/board-details/";
         axios.post(url, { boardId, token }).then((res) => {
             if (res.data === "SESSION_EXPIRED")
                 history.push("/login");
@@ -45,7 +46,8 @@ const BoardDetails = (props) => {
     // })
     const removeTask = (task) => {
         // console.log(task);
-        const url = "http://localhost:8080/myboards/board-details/remove-task";
+        // const url = "http://localhost:8080/myboards/board-details/remove-task";
+        const url = "https://board-app-horsetails.herokuapp.com/myboards/board-details/remove-task";
         axios.post(url, { token, task }).then((res) => {
             // console.log(res);
 

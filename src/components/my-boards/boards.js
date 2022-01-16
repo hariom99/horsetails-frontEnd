@@ -18,7 +18,8 @@ const Boards = (props) => {
     // console.log(token);
 
     useEffect(() => {
-        const url = "http://localhost:8080/myboards/";
+        // const url = "http://localhost:8080/myboards/";
+        const url = "https://board-app-horsetails.herokuapp.com/myboards/";
         axios.post(url, { token }).then((res) => {
             // console.log(res);
             if (res.data === "SESSION_EXPIRED")
@@ -61,6 +62,24 @@ const Boards = (props) => {
     //     setBoards(updatedBoard);
     // }
 
+    const deleteBoard = (e, boardId) => {
+        e.stopPropagation();
+        // const url = "http://localhost:8080/myboards/delete-board";
+        const url = "https://board-app-horsetails.herokuapp.com/myboards/delete-board";
+        const token = localStorage.getItem("token");
+
+        // console.log(boardId);
+
+        axios.post(url, { boardId, token }).then((res) => {
+            // console.log(res.data.boards);
+            setBoards(res.data.boards);
+        }).catch((err) => {
+            console.log(err);
+        })
+
+    }
+
+
     return (
         <div className="boards-parent" >
             <button onClick={logout} type="submit" className="btn-logout" >Logout</button>
@@ -80,8 +99,12 @@ const Boards = (props) => {
                         {
                             boards.map((data, ind) => {
                                 // console.log(data);
-                                return <div key={ind} onClick={() => boardDetails({ "boardId": data.boardId, "boardName": data.boardName, "boardDetails": data.boardDetails })} style={{ backgroundColor: `${data.boardColor}` }} className="board">
+                                return <div key={ind}
+                                    onClick={() => boardDetails({ "boardId": data.boardId, "boardName": data.boardName, "boardDetails": data.boardDetails })}
+                                    style={{ backgroundColor: `${data.boardColor}` }}
+                                    className="board">
                                     {data.boardName}
+                                    <span title="Delete Board" onClick={(e) => deleteBoard(e, data.boardId)} className="delete-board" >&#10006;</span>
                                 </div>
                             })
                         }

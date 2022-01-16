@@ -33,7 +33,8 @@ const CreateBoard = (props) => {
             setBoardWarning(null);
 
             const token = localStorage.getItem("token");
-            const url = "http://localhost:8080/myboards/createboard/"
+            // const url = "http://localhost:8080/myboards/createboard/"
+            const url = "https://board-app-horsetails.herokuapp.com/myboards/createboard/"
             axios.post(url, { token, boardName, boardColor }).then((res) => {
 
                 if (res.data === "SESSION_EXPIRED")

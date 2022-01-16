@@ -21,7 +21,8 @@ const Signup = () => {
             setRegMsg("please enter valid password");
         else {
 
-            axios.post("http://localhost:8080/register/"
+            // axios.post("http://localhost:8080/register/"
+            axios.post("https://board-app-horsetails.herokuapp.com/register/"
                 , payLoad).then((res) => {
                     if (res.data.data === undefined)
                         setRegMsg("Already registered !");

@@ -10,7 +10,8 @@ const Login = (props) => {
 
     const login = (e) => {
         e.preventDefault();
-        const url = "http://localhost:8080/login/";
+        // const url = "http://localhost:8080/login/";
+        const url = "https://board-app-horsetails.herokuapp.com/login/";
         if (email === "" || password === "") {
             setLogMsg("Fields cannot be empty")
         }

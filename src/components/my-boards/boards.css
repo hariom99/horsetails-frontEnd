@@ -65,6 +65,7 @@ border-radius: 10px;
 }
 
 .board{
+    position: relative;
     color: white;
     border-radius: 15px;
     margin: 15px 55px;
@@ -103,6 +104,24 @@ border-radius: 10px;
     height: 40px;
 }
 
+.delete-board{
+    position: absolute;
+    display: none;
+    color: black;
+    top: 0;
+    right: 2%;
+}
+
+.board:hover>.delete-board{
+    display: block;
+}
+
+/* create-task css */
+.cancel-task{
+    font-size: 40px;
+    cursor: pointer;
+}
+/* create-task css */
 @media screen and (max-width:700px) {
     .btn-logout{
         align-self: flex-end;
