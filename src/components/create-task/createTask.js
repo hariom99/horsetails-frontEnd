@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom";
 const CreateTask = (props) => {
     const newTaskRef = useRef(null);
     const history = useHistory();
-    const [taskWarning, setTaskWarning] = useState("");
+    const [taskWarning, setTaskWarning] = useState(null);
 
     // console.log(props.location.state);
 

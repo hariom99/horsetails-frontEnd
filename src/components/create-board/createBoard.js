@@ -7,7 +7,7 @@ const CreateBoard = (props) => {
     const history = useHistory()
     const [boardName, setBoardName] = useState("");
     const [boardColor, setBoardColor] = useState("");
-    const [boardWarning, setBoardWarning] = useState("");
+    const [boardWarning, setBoardWarning] = useState(null);
 
     // const newBoard = { boardName, boardColor };
     // console.log(newBoard);
