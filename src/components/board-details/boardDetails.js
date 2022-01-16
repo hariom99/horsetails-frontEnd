@@ -91,7 +91,7 @@ const BoardDetails = (props) => {
 
                     }
 
-                    <div onClick={() => { createTask(0, boardId) }} className="tasks task add-task" >
+                    <div onClick={() => createTask(0, boardId)} className="tasks task add-task" >
                         +
                     </div>
                 </div>

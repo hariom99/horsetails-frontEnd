@@ -9,7 +9,7 @@ import { useState } from "react/cjs/react.development";
 const CreateTask = (props) => {
     const newTaskRef = useRef(null);
     const history = useHistory();
-    const [taskWarning, setTaskWarning] = useState(null);
+    const [taskWarning, setTaskWarning] = useState("");
 
     // console.log(props.location.state);
 
